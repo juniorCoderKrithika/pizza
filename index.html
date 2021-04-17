@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>
+           paragraph maker
+        </title>
+    </head>
+    <body>
+        <center>
+            <h1>
+               Make paragraphs
+            </h1>
+    <div>
+        <span>1.</span>
+        <input type="text" placeholder="Enter" id="student_1">
+        <br>
+        <br>
+        <span>2.</span>
+        <input type="text" placeholder="Enter" id="student_2">
+        <br>
+        <br>
+        <span>3.</span>
+        <input type="text" placeholder="Enter " id="student_3">
+        <br>
+        <br>
+        <span>4.</span>
+        <input type="text" placeholder="Enter" id="student_4">
+        <br>
+        <br>
+    </div>
+    <button id="submit" onclick="submit()">
+        get para 1
+         </button>
+    <div>
+        <span>1.</span>
+        <input type="text" placeholder="Enter" id="para_1">
+        <br>
+        <br>
+        <span>2.</span>
+        <input type="text" placeholder="Enter" id="para_2">
+        <br>
+        <br>
+        <span>3.</span>
+        <input type="text" placeholder="Enter" id="para_3">
+        <br>
+        <br>
+        <span>4.</span>
+        <input type="text" placeholder="Enter" id="para_4">
+        <br>
+        <br>
+    </div>
+    <button id="sfbmit" onclick="sfbmit()">
+        get para 2
+         </button>
+        <div id="display_without_commas" style="font-weight: bold;"></div>
+        </center>
+    </body>
+    <script>
+ students=[];
+ function submit (){
+    name_of_students=[];
+
+for(var j=1 ; j<=4;j++){
+var student_name = document.getElementById("student_"+j).value;
+console.log(student_name);
+students.push(student_name);
+}
+console.log(students)
+var length_of_array = students.length;
+console.log(length_of_array);
+for(var k=0;k<length_of_array;k++){
+   name_of_students.push(students[k]);
+   console.log(name_of_students);
+}
+var remove_commas = name_of_students.join(" ");
+console.log(remove_commas);
+document.getElementById("display_without_commas").innerHTML=remove_commas;
+
+ }
+ function sfbmit (){
+    name_of_students=[];
+
+for(var j=1 ; j<=4;j++){
+var student_name = document.getElementById("para_"+j).value;
+console.log(student_name);
+students.push(student_name);
+}
+console.log(students)
+var length_of_array = students.length;
+console.log(length_of_array);
+for(var k=0;k<length_of_array;k++){
+   name_of_students.push(students[k]);
+   console.log(name_of_students);
+}
+var remove_commas = name_of_students.join(" ");
+console.log(remove_commas);
+document.getElementById("display_without_commas").innerHTML=remove_commas;
+ }
+</script>
+
+</html>
